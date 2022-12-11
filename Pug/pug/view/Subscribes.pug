@@ -1,0 +1,35 @@
+extends ../template/main
+
+block extraStyle
+    style('text/css').
+        main img {
+            width: 25%;
+            object-fit: cover;
+        }
+
+        header {
+            margin: 0% 0% 1% 0%;
+        }
+
+block main
+    main.bg-white.fs-2
+        .d-flex.flex-raw.align-items-center.border.border-primary
+            img(src='src/TestImg1.jpg')
+            div
+                | @shadowik
+        .d-flex.flex-raw.align-items-center.border.border-primary
+            img(src='src/TestImg2.jpg')
+            div
+                | @malevich
+        .d-flex.flex-raw.align-items-center.border.border-primary
+            img(src='src/TestImg3.jpg')
+            div
+                | @AlexGlass
+        .d-flex.flex-raw.align-items-center.border.border-primary
+            img(src='src/TestImg2.jpg')
+            div
+                | @Zero
+        .d-flex.flex-raw.align-items-center.border.border-primary
+            img(src='src/TestImg1.jpg')
+            div
+                | @I_am_tired

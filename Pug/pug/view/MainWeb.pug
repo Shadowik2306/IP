@@ -1,0 +1,72 @@
+extends ../template/main
+
+
+block extraStyle
+    style('text/css').
+        .content {
+            margin: 5%;
+        }
+
+        .content div {
+            margin: 3%;
+            padding: 1%;
+        }
+
+        .content div img {
+            object-fit: cover;
+            width: 50%;
+        }
+
+        .content div .info {
+            width: 50%;
+        }
+
+        .content div .info > *:nth-child(2) {
+            height: 60%;
+        }
+
+        .content div .info > *:nth-child(3) {
+            height: 20%;
+            color: #0000FF;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .slider {
+        }
+
+        .slider img {
+            object-fit: cover;
+            height: 630px;
+        }
+
+
+block main
+    main
+        .content.d-flex.flex-column
+            #banner.slider
+                img.hide(src='src/TestImg1.jpg')
+                img.hide(src='src/TestImg2.jpg')
+                img.hide(src='src/TestImg3.jpg')
+            script(src='js/Slider.js')
+            #posts
+    footer.container.bg-light
+        form#frm-items(action='UserPage.html')
+            .form-group
+                label(for='item') Picture
+                input#item.form-control(type='file' required='')
+            .form-row
+                .form-group.col-md-6
+                    label(for='nickname') Nickname
+                    input#nickname.form-control(type='text' placeholder='Nickname' required='')
+            .form-row
+                .form-group.col-md-6
+                    label(for='description') Description
+                    input#description.form-control(type='text' placeholder='Description' required='')
+            .form-check
+                input#check.form-check-input(type='checkbox')
+                label.form-check-label(for='check') я влвдею этим изображением;
+            button.btn.btn-primary(type='submit') Add new picture
+    script(src='js/items.js')

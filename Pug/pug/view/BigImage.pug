@@ -1,0 +1,47 @@
+extends ../template/main
+
+block extraStyle
+    style('text/css').
+        main .Image {
+            background-color: white;
+            padding: 2%;
+        }
+        main img {
+            width: 100%;
+        }
+        .ImageInfo {
+            font-size: 200%;
+        }
+        main .Image .ImageInfo>*:nth-child(n + 3) {
+            color: #0000FF;
+        }
+        main .Comments {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 5% 0;
+        }
+        main .Comments .Comment {
+            margin: 1% 0;
+        }
+        main .Comments .Comment>*:nth-child(2) {
+            margin-top: 1%;
+            margin-left: 8%;
+        }
+
+block main
+    main.d-flex.flex-column
+        .d-flex.flex-column.bg-light
+            img(src='src/TestImg1.jpg')
+            .ImageInfo.d-flex.flex-column.justify-content-around.fs-5
+                .fs-1 @Malevich
+                .fs-2 It`s my square
+                .align-items-center Likes: 1340
+                .align-items-center  Comments: 2
+        .Comments.d-flex.flex-column.bg-light.fs-3
+            .Comment
+                div @shadowik
+                .fs-4 It`s dumb
+            .Comment
+                div @AlexGlass
+                .fs-4 Oh yeeah

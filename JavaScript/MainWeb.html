@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtCloud</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+			integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+	<style type="text/css">
+		body {
+			background: rgb(221, 244, 251);
+		}
+
+		.content {
+			margin: 5%;
+		}
+
+		.content div {
+			margin: 3%;
+			padding: 1%;
+		}
+
+		.content div img {
+			object-fit: cover;
+    		width: 50%;
+		}
+
+		.content div .info {
+			width: 50%;
+		}
+
+
+		.content div .info>*:nth-child(2) {
+			height: 60%;
+		}
+
+		.content div .info>*:nth-child(3) {
+			height: 20%;
+			color: #0000FF;
+		}
+
+		.hide {
+			display: none;
+		}
+
+		.slider {
+
+		}
+
+		.slider img{
+			object-fit: cover;
+			height: 630px;
+		}
+
+    </style>
+
+</head>
+<body>
+	  <header class="navbar navbar-expand-lg bg-light justify-content-around">
+        <div class="text-primary fs-1 navbar-brand">
+			ART CLOUD
+		</div>
+    <div class="d-inline-flex justify-content-around fs-2 collapse navbar-collapse">
+			<h1 class="navbar-item"><a href="MainWeb.html">New</a></h1>
+            <h1 class="navbar-item">Most liked</h1>
+            <h1 class="navbar-item"1><a href="Subscribes.html">Subscribes</a></h1>
+		</div>
+		<a href="UserPage.html"><img src="src/AvatarHeader.png"></a>
+	</header>
+
+
+	<main>
+		<div class="content d-flex flex-column">
+			<div id="banner" class="slider">
+				<img src="src/TestImg1.jpg" class="hide">
+				<img src="src/TestImg2.jpg" class="hide">
+				<img src="src/TestImg3.jpg" class="hide">
+			</div>
+			<script src="scripts/Slider.js"></script>
+			<div id="posts">
+				<a href="BigImage.html">
+				<div class="container d-flex bg-light">
+					<div class="container">
+						<img class="col-sm" src="src/TestImg1.jpg">
+						<div class="col-sm info d-flex flex-column fs-2">
+							<div class="fs-1 fw-bold">
+								@malevich
+							</div>
+							<div>It is my square</div>
+							<div class="d-flex flex-row">
+								<div class="fs-5">Comments: 132</div>
+								<div class="fs-5">Likes: 1220</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="BigImage.html">
+				<div class="container d-flex bg-light">
+					<div class="row">
+						<img class="col-sm" src="src/TestImg2.jpg">
+						<div class="info d-flex flex-column fs-2">
+							<div class="fs-1 fw-bold">
+								@shadowik
+							</div>
+							<div>Wow, it's so beautiful</div>
+							<div class="col-sm d-flex flex-row">
+								<div class="fs-5">Comments: 1332</div>
+								<div class="fs-5">Likes: 12820</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</a>
+
+				<a href="BigImage.html">
+				<div class="container bg-light">
+					<div class="row">
+						<img class="col-sm" src="src/TestImg3.jpg">
+						<div class="col-sm info d-flex flex-column fs-2">
+							<div class="fs-1 fw-bold text-break">
+								@Dead_aliba_king
+							</div>
+							<div>It is present for you</div>
+							<div class="d-flex flex-row">
+								<div class="fs-5">Comments: 3</div>
+								<div class="fs-5">Likes: 1</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</a>
+			</div>
+		</div>	
+	</main>
+
+	<footer class="container bg-light">
+		<form action="UserPage.html" id="frm-items" >
+			<div class="form-group">
+				<label for="item">Picture</label>
+				<input type="file" class="form-control" id="item" required>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="nickname">Nickname</label>
+					<input type="text" class="form-control" id="nickname" placeholder="Nickname" required>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="description">Description</label>
+					<input type="text" class="form-control" id="description" placeholder="Description" required>
+				</div>
+			</div>
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="check">
+				<label class="form-check-label" for="check">Я имею право выкладывать эту картинку</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Add new picture</button>
+		</form>
+	</footer>
+
+</body>
+<script src="scripts/items.js"></script>
+</html>

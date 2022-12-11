@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+            crossorigin="anonymous"></script>
+    <style type="text/css">
+
+        .content {
+            margin: 5%;
+        }
+
+        table img {
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg bg-light justify-content-around">
+        <div class="text-primary fs-1 navbar-brand">
+            ART CLOUD
+        </div>
+        <div class="d-inline-flex justify-content-around fs-2 collapse navbar-collapse">
+            <h1 class="navbar-item"><a href="MainWeb.html">New</a></h1>
+            <h1 class="navbar-item">Most liked</h1>
+            <h1 class="navbar-item"1><a href="Subscribes.html">Subscribes</a></h1>
+        </div>
+        <a href="UserPage.html"><img src="src/AvatarHeader.png"></a>
+    </header>
+
+    <main class="content">
+        <form action="UserPage.html" id="frm-items" >
+            <div class="form-group">
+                <label for="item">Picture</label>
+                <input type="file" class="form-control-file" id="item" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="description" placeholder="Description" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add new picture</button>
+        </form>
+
+        <table id="tbl-items" class="table">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Picture</th>
+                <th scope="col">Description</th>
+                <th scope="col">Remove</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+</body>
+<script src="scripts/items.js"></script>
+</html>

@@ -1,0 +1,21 @@
+{{#each items}}
+    <div class="container bg-light" id="item-{{ @key }}">
+        <div class="row">
+            <img class="col-sm" src="{{ this.filename }}">
+            <div class="col-sm info d-flex flex-column fs-2">
+                <div class="fs-1 fw-bold text-break" id="nickname">
+                    {{ this.nickname }}
+                </div>
+                <div id="description">{{ this.description }}</div>
+                <div class="d-flex flex-row">
+                    <div class="fs-5">Comments: 3</div>
+                    <div class="fs-5">Likes: 1</div>
+                </div>
+                <div>
+                    <button onclick="editItemInTable({{ @key }})" class="btn btn-primary" style="width: 100%;height: 100%;"> Edit </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}

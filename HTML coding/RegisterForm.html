@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtCloud</title>
+	<style type="text/css">
+		body.style_body {
+		    background-attachment: scroll;
+		    background-clip: border-box;
+		    background-origin: padding-box;
+		    direction: ltr;
+		    display: block;
+		    margin: 0px auto;
+		    overflow: scroll;
+		    padding: 0px;
+		    position: relative;
+		    background-color: rgb(221, 244, 251);
+		    height: 100%;
+		}
+
+		.MyHeader {
+			display: flex;
+  			background-color: white;
+  			box-sizing: border-box;
+  			height: 8%;
+    		padding: 1%;
+    		position: fixed;
+    		width: 100%;
+    		top: 0px;
+    		justify-content: center;
+		}
+
+		.logo {
+			color: #96d9ef;
+			font-size: 40px;
+		}
+
+		main {
+			display: flex;
+    		flex-direction: row;
+			padding: 2%;
+			margin: 10% 5%;
+		}
+
+		main img {
+			width: 50%;
+			object-fit: cover;
+		}
+
+		main form {
+			background-color: white;
+		}
+
+		* {box-sizing: border-box}
+
+		/* Add padding to containers */
+		.container {
+		  padding: 16px;
+		}
+
+		/* Full-width input fields */
+		input[type=text], input[type=password] {
+		  width: 100%;
+		  padding: 15px;
+		  margin: 5px 0 22px 0;
+		  display: inline-block;
+		  border: none;
+		  background: #f1f1f1;
+		}
+
+		input[type=text]:focus, input[type=password]:focus {
+		  background-color: #ddd;
+		  outline: none;
+		}
+
+		/* Overwrite default styles of hr */
+		hr {
+		  border: 1px solid #f1f1f1;
+		  margin-bottom: 25px;
+		}
+
+		/* Set a style for the submit/register button */
+		.registerbtn {
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 16px 20px;
+		  margin: 8px 0;
+		  border: none;
+		  cursor: pointer;
+		  width: 100%;
+		  opacity: 0.9;
+		}
+
+		.registerbtn:hover {
+		  opacity:1;
+		}
+
+		a {
+		  color: dodgerblue;
+		}
+
+		.signin {
+		  background-color: #f1f1f1;
+		  text-align: center;
+		}
+
+	</style>
+</head>
+<body class="style_body">
+	<header class="MyHeader">
+		<div class="logo">
+			ART CLOUD
+		</div>
+	</header>
+
+	<main>
+		<img src="src/RegisterCloud.png">
+		<form action="MainWeb.html" href="">
+			<div class="container">
+			    <h1>Register</h1>
+			    <p>Please fill in this form to create an account.</p>
+			    <hr>
+
+			    <label for="email"><b>Email</b></label>
+			    <input type="text" placeholder="Enter Email" name="email" required>
+
+			    <label for="psw"><b>Password</b></label>
+			    <input type="password" placeholder="Enter Password" name="psw" required>
+
+			    <label for="psw-repeat"><b>Repeat Password</b></label>
+			    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+			    <hr>
+
+			    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+			    <button type="submit" class="registerbtn">Register</button
+			</div>
+
+			<div class="container signin">
+			    <p>Already have an account? <a href="#">Sign in</a>.</p>
+			</div>
+		</form>
+	</main>
+</body>
+</html>

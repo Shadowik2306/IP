@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArtCloud</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  <script src="js/handlebars.js"></script>
+  <style text/css>
+    body {
+        background: rgb(221, 244, 251);
+    }
+  </style>
+  <style text/css>
+    .content {
+        margin: 5%;
+    }
+    
+    .content div {
+        margin: 3%;
+        padding: 1%;
+    }
+    
+    .content div img {
+        object-fit: cover;
+        width: 50%;
+    }
+    
+    .content div .info {
+        width: 50%;
+    }
+    
+    .content div .info > *:nth-child(2) {
+        height: 60%;
+    }
+    
+    .content div .info > *:nth-child(3) {
+        height: 20%;
+        color: #0000FF;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .slider {
+    }
+    
+    .slider img {
+        object-fit: cover;
+        height: 630px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <header class="navbar navbar-expand-lg bg-light justify-content-around">
+    <div class="text-primary fs-1 navbar-brand">ART CLOUD</div>
+    <div class="d-inline-flex justify-content-around fs-2 collapse navbar-collapse">
+      <h1 class="navbar-item"><a href="MainWeb.html">New</a></h1>
+      <h1 class="navbar-item">Most liked</h1>
+      <h1 class="navbar-item"><a href="Subscribes.html">Subscribes</a></h1>
+    </div><a href="UserPage.html"><img src="src/AvatarHeader.png"></a>
+  </header>
+  <main>
+    <div class="content d-flex flex-column">
+      <div class="slider" id="banner"><img class="hide" src="src/TestImg1.jpg"><img class="hide" src="src/TestImg2.jpg"><img class="hide" src="src/TestImg3.jpg"></div>
+      <script src="js/Slider.js"></script>
+      <div id="posts"></div>
+    </div>
+  </main>
+  <footer class="container bg-light">
+    <form id="frm-items" action="UserPage.html">
+      <div class="form-group">
+        <label for="item">Picture</label>
+        <input class="form-control" id="item" type="file" required="">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="nickname">Nickname</label>
+          <input class="form-control" id="nickname" type="text" placeholder="Nickname" required="">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="description">Description</label>
+          <input class="form-control" id="description" type="text" placeholder="Description" required="">
+        </div>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" id="check" type="checkbox">
+        <label class="form-check-label" for="check">я влвдею этим изображением;</label>
+      </div>
+      <button class="btn btn-primary" type="submit">Add new picture</button>
+    </form>
+  </footer>
+  <script src="js/items.js"></script>
+</body>

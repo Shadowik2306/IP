@@ -1,0 +1,50 @@
+extends ../template/main
+
+block extraStyle
+    style('text/css').
+        footer {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        main .content img {
+            width: 30%;
+        }
+
+
+block main
+    main.bg-white.container(style='margin-bottom: 10%; padding: 2%;')
+        .row
+            img.col-sm(src='src/TestImg1.jpg' style='width: 30%; object-fit: cover;')
+            .col-sm.d-flex.flex-column.fs-2.justify-content-around.text-unwrap(style='width: 100%')
+                div
+                    | @Shadowik
+                div
+                    | Developer, not artist
+                .d-flex.flex-row.gap-3.text-primary
+                    div Subscribes: 100
+                    div Followers: 23
+        .bg-white.content(style='padding: 2%;')
+            img(src='src/TestImg1.jpg')
+            img(src='src/TestImg2.jpg')
+            img(src='src/TestImg3.jpg')
+            img(src='src/TestImg1.jpg')
+            img(src='src/TestImg2.jpg')
+            img(src='src/TestImg3.jpg')
+            img(src='src/TestImg2.jpg')
+            img(src='src/TestImg3.jpg')
+            img(src='src/TestImg3.jpg')
+            img(src='src/TestImg1.jpg')
+            img(src='src/TestImg1.jpg')
+            img(src='src/TestImg1.jpg')
+            img(src='src/TestImg1.jpg')
+            img(src='src/TestImg2.jpg')
+            img(src='src/TestImg3.jpg')
+    footer
+        .bg-white.content
+            .row
+                a(href='AddNewImage.html')
+                    h1 +

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtCloud</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+	<style type="text/css">
+		body.style_body {
+		    background-attachment: scroll;
+		    background-clip: border-box;
+		    background-origin: padding-box;
+		    direction: ltr;
+		    display: block;
+		    margin: 0px auto;
+		    overflow: scroll;
+		    padding: 0px;
+		    position: relative;
+		    background-color: rgb(221, 244, 251);
+		    height: 100%;
+		}
+
+		.MyHeader {
+			display: flex;
+  			background-color: white;
+  			box-sizing: border-box;
+  			height: 8%;
+    		padding: 1%;
+    		position: fixed;
+    		width: 100%;
+    		top: 0px;
+		}
+
+		.logo {
+			color: #96d9ef;
+			font-size: 40px;
+			width: 30%;
+		}
+
+		.headerButtons {
+			display: flex;
+    		align-items: center;
+    		width: 70%;
+    		gap: 25%;
+		}
+
+		main {
+			display: flex;
+			flex-direction: column;
+			margin: 8%;
+		}
+
+		main .user {
+			height: 30%;
+			background-color: white;
+			margin-bottom: 10%;
+			padding: 2%;
+			display: flex;
+			flex-direction: row;
+			gap: 1%;
+		}
+
+		main .user img {
+			width: 250px;
+			height: 250px;
+			object-fit: cover;
+
+		}
+
+		main .user .user-info {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			font-size: 200%;
+			justify-content: space-around;
+		}
+
+		main .user .user-info>*:nth-child(3) {
+			display: flex;
+			flex-direction: row;
+			gap: 10%;
+			color: #0000FF;
+		}
+
+		main .content {
+			background-color: white;
+			padding: 2%;
+		}
+
+		main .content img {
+			width: 33%;
+		}
+
+
+
+	</style>
+</head>
+<body class="style_body">
+	<header class="MyHeader">
+		<div class="logo">
+			ART CLOUD
+		</div>
+		<div class="headerButtons">
+			<h1><a href="MainWeb.html">New</a></h1>
+			<h1>Most liked</h1>
+			<h1><a href="Subscribes.html">Subscribes</a></h1>
+			<a href="UserPage.html"><img src="src/AvatarHeader.png"><a>
+		</div>
+	</header>
+
+	<main>
+		<div class="user">
+			<img src="src/TestImg1.jpg">
+			<div class="user-info">
+				<div>
+					@Shadowik
+				</div>
+				<div>
+					Developer, not artist
+				</div>
+				<div>
+					<div>Subscribes: 100</div>
+					<div>Followers: 23</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<img src="src/TestImg1.jpg">
+			<img src="src/TestImg2.jpg">
+			<img src="src/TestImg3.jpg">
+			<img src="src/TestImg1.jpg">
+			<img src="src/TestImg2.jpg">
+			<img src="src/TestImg3.jpg">
+			<img src="src/TestImg2.jpg">
+			<img src="src/TestImg3.jpg">
+			<img src="src/TestImg3.jpg">
+			<img src="src/TestImg1.jpg">
+			<img src="src/TestImg1.jpg">
+			<img src="src/TestImg1.jpg">
+			<img src="src/TestImg1.jpg">
+			<img src="src/TestImg2.jpg">
+			<img src="src/TestImg3.jpg">
+		</div>
+	</main>
+</body>
+</html>
